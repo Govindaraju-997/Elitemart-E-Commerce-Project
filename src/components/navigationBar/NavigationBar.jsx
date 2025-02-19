@@ -7,7 +7,7 @@ import { IoMdClose } from "react-icons/io";
 import { useSelector } from "react-redux";
 import { TiShoppingCart } from "react-icons/ti";
 
-const Navbar = () => {
+const NavigationBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false); // Mobile menu state
   const [user, setUser] = useState(null);
@@ -64,11 +64,6 @@ const Navbar = () => {
 
 
         {/* Search Bar (Hidden on Mobile) */}
-
-        {/* <div className="hidden md:flex items-center border rounded-full px-4 py-1 w-1/3">
-          <FaSearch className="text-gray-500 mr-2" />
-          <input type="text" placeholder="Search for products, brands and more" className="outline-none w-full" />
-        </div> */}
 
         <form onSubmit={handleSearch} className="md:flex items-center border rounded-lg px-4 py-1 w-1/3">
           <span className="hidden md:inline">
@@ -161,6 +156,6 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavigationBar;
 
 
