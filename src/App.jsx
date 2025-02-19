@@ -19,9 +19,10 @@ import ProtectedRouteForAdmin from "./protectedRoute/ProtectedRouteForAdmin";
 import ProtectedRouteForUser from "./protectedRoute/ProtectedRouteForUser";
 import CategoryPage from "./pages/category/CategoryPage";
 import ContactPage from "./pages/contact/ContactUs";
-import HomePage from "./pages/home/Homepage";
 import BuyNowModal from "./components/buyNowModal/BuyNowModal";
 import AboutUs from "./pages/about/AboutUs";
+import Home from "./pages/home/Home";
+
 
 
 const App = () => {
@@ -29,7 +30,7 @@ const App = () => {
     <MyState>
       <Router>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<Home />} />
           <Route path="/*" element={<NoPage />} />
           <Route path="/productinfo/:id" element={<ProductInfo />} />
           <Route path="/cart" element={<CartPage />} />
