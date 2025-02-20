@@ -81,7 +81,6 @@ const CartPage = () => {
 
         var options = {
             key: "rzp_test_JTSHS6xRWbqqde",
-            key_secret: "blmY5SQWrFkEZYUGXZK1qu7M",
             amount: parseInt(cartTotal * 100),
             currency: "INR",
             order_receipt: 'order_rcptid_' + name,

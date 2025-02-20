@@ -1,11 +1,12 @@
 
 import { useState, useEffect } from "react";
 import { FaUser, FaSearch, FaHeart } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { TbLogout2 } from "react-icons/tb";
 import { IoMdClose } from "react-icons/io";
 import { useSelector } from "react-redux";
 import { TiShoppingCart } from "react-icons/ti";
+
 
 const NavigationBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,12 +14,17 @@ const NavigationBar = () => {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
+  const location = useLocation();
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("users"));
     setUser(user);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top on route change
+  }, [location.pathname]);
+  
   // // Logout function
   const logout = () => {
     localStorage.removeItem("users");

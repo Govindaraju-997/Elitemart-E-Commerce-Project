@@ -22,13 +22,14 @@ import ContactPage from "./pages/contact/ContactUs";
 import BuyNowModal from "./components/buyNowModal/BuyNowModal";
 import AboutUs from "./pages/about/AboutUs";
 import Home from "./pages/home/Home";
-
+import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 
 
 const App = () => {
   return (
     <MyState>
       <Router>
+      <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/*" element={<NoPage />} />

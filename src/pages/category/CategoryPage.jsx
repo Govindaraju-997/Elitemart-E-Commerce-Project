@@ -17,7 +17,7 @@ const CategoryPage = () => {
 
     // Pagination State
     const [currentPage, setCurrentPage] = useState(0);
-    const productsPerPage = 5;
+    const productsPerPage = 8;
 
     useEffect(() => {
         localStorage.setItem("cart", JSON.stringify(cartItems));
