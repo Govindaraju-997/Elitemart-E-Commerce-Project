@@ -34,14 +34,14 @@ const ProductDetail = () => {
                 <h1 className=" text-xl text-blue-900 font-bold">All Product</h1>
                 {/* Add Product Button  */}
                 <Link to={'/addproduct'}>
-                    <button className="px-5 py-2 bg-slate-400 border border-slate-100 rounded-lg">Add Product</button>
+                    <button className="px-5 py-2 bg-blue-300 border border-slate-100 rounded-lg font-bold">Add Product</button>
                 </Link>
             </div>
 
             {/* Loading  */}
-            <div className="flex justify-center relative top-20">
+            {/* <div className="flex justify-center relative top-20">
                 {loading && <Loader />}
-            </div>
+            </div> */}
 
             {/* table  */}
             <div className="w-full overflow-x-auto mb-5">

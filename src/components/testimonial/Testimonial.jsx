@@ -38,7 +38,7 @@ const Testimonial = () => {
             <img
               src={testimonial.image}
               alt={testimonial.name}
-              className="w-40 h-40 rounded-full mx-auto mb-4"
+              className="w-30 h-30 rounded-full mx-auto mb-4"
             />
             <p className="text-gray-600 italic">"{testimonial.feedback}"</p>
             <h3 className="text-xl font-semibold text-gray-800 mt-4">{testimonial.name}</h3>

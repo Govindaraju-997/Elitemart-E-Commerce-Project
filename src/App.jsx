@@ -65,6 +65,7 @@ const App = () => {
             </ProtectedRouteForAdmin>
           } />
         </Routes>
+        
         <Toaster />
       </Router>
     </MyState>

@@ -7,9 +7,10 @@ import Loader from "../../components/loader/Loader";
 const UserDashboard = () => {
     // Fetch user details from localStorage
     const user = JSON.parse(localStorage.getItem("users"));
-    
+
     // Get context values
-    const { loading, getAllOrder, getAllOrderFunction, orders } = useContext(myContext);
+    // const { loading, getAllOrder, getAllOrderFunction, orders } = useContext(myContext);
+    const { loading, getAllOrder, getAllOrderFunction } = useContext(myContext);
 
     // Fetch orders on component mount
     useEffect(() => {
@@ -112,3 +113,4 @@ const UserDashboard = () => {
 };
 
 export default UserDashboard;
+

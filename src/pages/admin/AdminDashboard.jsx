@@ -22,41 +22,41 @@ const AdminDashboard = () => {
 
                 <div className="px-5">
                     {/* Mid  */}
-                    <div className="mid mb-5">
+                    {/* <div className="mid mb-5"> */}
                         {/* main  */}
-                        <div className=" bg-slate-200 py-5 rounded-xl border border-slate-300">
+                        {/* <div className=" bg-slate-200 py-5 rounded-xl border border-slate-300"> */}
                             {/* image  */}
-                            <div className="flex justify-center">
+                            {/* <div className="flex justify-center">
                                 <img src="https://img.icons8.com/?size=100&id=fJ7hcfUGpKG7&format=png&color=000000" alt="" />
-                            </div>
+                            </div> */}
                             {/* text  */}
-                            <div className="">
+                            {/* <div className=""> */}
                                 {/* Name  */}
-                                <h1 className=" text-center text-lg">
+                                {/* <h1 className=" text-center text-lg">
                                     <span className=" font-bold">Name : </span>
                                     {user?.name}
-                                </h1>
+                                </h1> */}
 
                                 {/* Email  */}
-                                <h1 className=" text-center text-lg">
+                                {/* <h1 className=" text-center text-lg">
                                     <span className=" font-bold">Email : </span>
                                     {user?.email}
-                                </h1>
+                                </h1> */}
 
                                 {/* Date  */}
-                                <h1 className=" text-center text-lg">
+                                {/* <h1 className=" text-center text-lg">
                                     <span className=" font-bold">Date : </span>
                                     {user?.date}
-                                </h1>
+                                </h1> */}
 
                                 {/* Role  */}
-                                <h1 className=" text-center text-lg">
+                                {/* <h1 className=" text-center text-lg">
                                     <span className=" font-bold">Role : </span>
                                     {user?.role}
-                                </h1>
-                            </div>
-                        </div>
-                    </div>
+                                </h1> */}
+                            {/* </div> */}
+                        {/* </div> */}
+                    {/* </div> */}
 
                     {/* Bottom */}
                     <div className="">
@@ -123,7 +123,7 @@ const AdminDashboard = () => {
                                 </Tab>
 
                                 {/* Total User  */}
-                                <Tab className="p-4 md:w-1/3 sm:w-1/2 w-full cursor-pointer">
+                                {/* <Tab className="p-4 md:w-1/3 sm:w-1/2 w-full cursor-pointer">
                                     <div className=" border bg-slate-200 hover:bg-slate-100 border-slate-300 px-4 py-3 rounded-xl" >
                                         <div className="text-blue-950 w-12 h-12 mb-3 inline-block" >
                                             <svg
@@ -148,7 +148,34 @@ const AdminDashboard = () => {
                                         <h2 className="title-font font-medium text-3xl text-blue-950 fonts1" >{getAllUser.length}</h2>
                                         <p className=" text-blue-950  font-bold" >Total Users</p>
                                     </div>
+                                </Tab> */}
+                                {/* Total User */}
+                                <Tab className="p-4 md:w-1/3 sm:w-1/2 w-full cursor-pointer">
+                                    <div className=" border bg-slate-200 hover:bg-slate-100 border-slate-300 px-4 py-3 rounded-xl">
+                                        <div className="text-blue-950 w-12 h-12 mb-3 inline-block">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width={50}
+                                                height={50}
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth={2}
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                className="lucide lucide-users"
+                                            >
+                                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                                <circle cx={9} cy={7} r={4} />
+                                                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                            </svg>
+                                        </div>
+                                        <h2 className="title-font font-medium text-3xl text-blue-950 fonts1">{getAllUser.length}</h2>
+                                        <p className=" text-blue-950 font-bold">Total Users</p>
+                                    </div>
                                 </Tab>
+
                             </TabList>
 
                             <TabPanel>

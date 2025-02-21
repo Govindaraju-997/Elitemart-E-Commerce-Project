@@ -80,7 +80,7 @@ const AddProductPage = () => {
     return (
         <div>
             <div className='flex justify-center items-center h-screen'>
-                {loading && <Loader />}
+                {/* {loading && <Loader />} */}
                 {/* Login Form  */}
                 <div className="login_Form bg-slate-200 px-8 py-6 border border-slate-200 rounded-xl shadow-md">
 

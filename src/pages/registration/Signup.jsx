@@ -56,9 +56,9 @@ const Signup = () => {
     return (
         <div className="flex justify-center items-center h-screen">
             {loading && <Loader />}
-            
+
             <div className="login_Form bg-neutral-100 px-8 py-6 border border-slate-200 rounded-xl shadow-md">
-            <div className="mb-5">
+                <div className="mb-5">
                     <h2 className='text-center text-2xl font-bold text-blue-950 '>SIGNUP</h2>
                 </div>
 
@@ -84,7 +84,7 @@ const Signup = () => {
                         placeholder="Password"
                         value={userSignup.password}
                         onChange={(e) => setUserSignup({ ...userSignup, password: e.target.value })}
-                         className='bg-gray-100 border border-gray-300 px-2 py-2 w-96 rounded-md  placeholder-slate-400'
+                        className='bg-gray-100 border border-gray-300 px-2 py-2 w-96 rounded-md  placeholder-slate-400'
                     />
 
                     <button
