@@ -2,10 +2,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import Layout from "../../components/layout/Layout";
 import { Trash } from 'lucide-react'
-import { decrementQuantity, deleteFromCart, incrementQuantity,clearCart } from "../../redux/cartSlice";
+import { decrementQuantity, deleteFromCart, incrementQuantity, clearCart } from "../../redux/cartSlice";
 import toast from "react-hot-toast";
 import { useEffect, useState } from "react";
-import { IoIosArrowRoundBack } from "react-icons/io";
+import { IoArrowBackCircle } from "react-icons/io5";
 import { Link, Navigate } from "react-router-dom";
 import BuyNowModal from "../../components/buyNowModal/BuyNowModal";
 import { collection, addDoc } from "firebase/firestore";
@@ -116,7 +116,7 @@ const CartPage = () => {
                     addDoc(orderRef, orderInfo);
 
                     // Clear the cart after order completion
-                dispatch(clearCart());
+                    dispatch(clearCart());
 
                     setAddress({
                         name: "",
@@ -217,63 +217,72 @@ const CartPage = () => {
                                     </>
                                     :
 
-                                    <h1>Not Found</h1>}
+                                    <div className="flex flex-col items-center justify-center text-center py-10">
+                                        <img src="https://rukminim2.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="" className="w-65 h-50 " />
+                                        <h1 className="text-lg">Your cart is empty!</h1>
+                                        <p className="text-xs">Explore our wide selection and find something you like</p>
+                                    </div>
+                                }
                             </ul>
                         </section>
+                        
                         {/* Order summary */}
-                        <section
-                            aria-labelledby="summary-heading"
-                            className="mt-16 rounded-md bg-white lg:col-span-4 lg:mt-0 lg:p-0"
-                        >
-                            <h2
-                                id="summary-heading"
-                                className=" border-b border-gray-200 px-4 py-3 text-lg font-medium text-gray-900 sm:p-4"
+                        {cartItems.length > 0 && (
+                            <section
+                                aria-labelledby="summary-heading"
+                                className="mt-16 rounded-md bg-white lg:col-span-4 lg:mt-0 lg:p-0"
                             >
-                                Price Details
-                            </h2>
-                            <div>
-                                <dl className=" space-y-1 px-2 py-4">
-                                    <div className="flex items-center justify-between">
-                                        <dt className="text-sm text-gray-800">Price ({cartItemTotal} item)</dt>
-                                        <dd className="text-sm font-medium text-gray-900">₹ {cartTotal}</dd>
+                                <h2
+                                    id="summary-heading"
+                                    className=" border-b border-gray-200 px-4 py-3 text-lg font-medium text-gray-900 sm:p-4"
+                                >
+                                    Price Details
+                                </h2>
+                                <div>
+                                    <dl className="space-y-1 px-2 py-4">
+                                        <div className="flex items-center justify-between">
+                                            <dt className="text-sm text-gray-800">Price ({cartItemTotal} item)</dt>
+                                            <dd className="text-sm font-medium text-gray-900">₹ {cartTotal}</dd>
+                                        </div>
+                                        <div className="flex items-center justify-between py-4">
+                                            <dt className="flex text-sm text-gray-800">
+                                                <span>Delivery Charges</span>
+                                            </dt>
+                                            <dd className="text-sm font-medium text-green-700">Free</dd>
+                                        </div>
+                                        <div className="flex items-center justify-between border-y border-dashed py-4">
+                                            <dt className="text-base font-medium text-gray-900">Total Amount</dt>
+                                            <dd className="text-base font-medium text-gray-900">₹ {cartTotal}</dd>
+                                        </div>
+                                    </dl>
+                                    <div className="px-2 pb-4 font-medium text-green-700">
+                                        <div className="flex gap-4 mb-6">
+                                            {user ? (
+                                                <BuyNowModal
+                                                    name={name}
+                                                    address={address}
+                                                    pincode={pincode}
+                                                    phoneNumber={phoneNumber}
+                                                    setName={setName}
+                                                    setAddress={setAddress}
+                                                    setPincode={setPincode}
+                                                    setPhoneNumber={setPhoneNumber}
+                                                    buyNow={buyNow}
+                                                />
+                                            ) : (
+                                                <Navigate to={'/login'} />
+                                            )}
+                                        </div>
                                     </div>
-                                    <div className="flex items-center justify-between py-4">
-                                        <dt className="flex text-sm text-gray-800">
-                                            <span>Delivery Charges</span>
-                                        </dt>
-                                        <dd className="text-sm font-medium text-green-700">Free</dd>
-                                    </div>
-                                    <div className="flex items-center justify-between border-y border-dashed py-4 ">
-                                        <dt className="text-base font-medium text-gray-900">Total Amount</dt>
-                                        <dd className="text-base font-medium text-gray-900">₹ {cartTotal}</dd>
-                                    </div>
-                                </dl>
-                                <div className="px-2 pb-4 font-medium text-green-700">
-                                    <div className="flex gap-4 mb-6">
-                                        {user
-                                            ? <BuyNowModal
-                                                name={name}
-                                                address={address}
-                                                pincode={pincode}
-                                                phoneNumber={phoneNumber}
-                                                setName={setName}
-                                                setAddress={setAddress}
-                                                setPincode={setPincode}
-                                                setPhoneNumber={setPhoneNumber}
-                                                buyNow={buyNow}
-                                            /> : <Navigate to={'/login'} />
-                                        }
-                                    </div>
-
-
                                 </div>
-                            </div>
-                        </section>
+                            </section>
+                        )}
+
                     </div>
                 </div>
                 <Link to={'/'}>
-                    <button className="bg-slate-300 rounded-2xl p-2 mb-15 pl-2 pr-5 flex items-center space-x-2">
-                        <IoIosArrowRoundBack />
+                    <button className="bg-blue-900 text-white font-bold rounded-2xl p-2 mb-15 pl-2 pr-5 flex items-center space-x-2 text-xs">
+                        <IoArrowBackCircle className="w-7 h-7" />
                         <span>CONTINUE SHOPPING</span>
                     </button>
                 </Link>
