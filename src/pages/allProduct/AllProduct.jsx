@@ -7,12 +7,13 @@ import myContext from "../../context/myContext";
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
+import Loader from "../../components/loader/Loader";
 
 const AllProduct = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const context = useContext(myContext);
-  const { getAllProduct } = context;
+  const { loading, getAllProduct } = context;
   const cartItems = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const [filteredProducts, setFilteredProducts] = useState(getAllProduct);
@@ -45,13 +46,19 @@ const AllProduct = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
- 
+
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cartItems));
   }, [cartItems]);
 
   return (
     <Layout>
+
+      {/* Loading  */}
+      <div className="flex justify-center relative top-20">
+        {loading && <Loader />}
+      </div>
+
       <div className="py-8 mt-15">
         {/* <h1 className="text-center mb-5 text-2xl font-semibold">All Products</h1> */}
         <section className="text-gray-600 body-font">

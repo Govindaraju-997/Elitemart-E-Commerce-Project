@@ -39,9 +39,9 @@ const ProductDetail = () => {
             </div>
 
             {/* Loading  */}
-            {/* <div className="flex justify-center relative top-20">
+            <div className="flex justify-center relative top-20">
                 {loading && <Loader />}
-            </div> */}
+            </div>
 
             {/* table  */}
             <div className="w-full overflow-x-auto mb-5">
