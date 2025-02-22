@@ -117,7 +117,7 @@ const NavigationBar = () => {
               <div className="absolute right-0 mt-2 w-60 bg-cyan-900 shadow-lg rounded-lg py-2 z-50">
                 {user?.role === "user" && (
                   <>
-                  <h1 className="pl-5 pt-5 pb-2 text-white">Hello! <span className="font-bold">{user?.name}</span></h1> <hr />
+                  <h1 className="pl-5 pt-5 pb-2 text-white">Hello! <span className="font-bold text-xl">{user?.name}</span></h1> <hr />
                     <Link to="/user-dashboard" className="block px-4 py-2 hover:bg-cyan-700 cursor-pointer flex items-center gap-2 text-white"><BsFillBoxSeamFill />My Orders</Link>
                     {/* <Link to="/wishlist" className="block px-4 py-2 hover:bg-gray-100">Wishlist</Link> */}
                   </>
