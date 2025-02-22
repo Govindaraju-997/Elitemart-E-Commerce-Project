@@ -6,6 +6,7 @@ import { TbLogout2 } from "react-icons/tb";
 import { IoMdClose } from "react-icons/io";
 import { useSelector } from "react-redux";
 import { TiShoppingCart } from "react-icons/ti";
+import { BsFillBoxSeamFill } from "react-icons/bs";
 
 
 const NavigationBar = () => {
@@ -102,7 +103,7 @@ const NavigationBar = () => {
           <div className="relative">
             {user ? (
               <div className="flex items-center gap-2 cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
-                <span className="hidden md:inline">{user?.name}</span>
+                <span className="hidden lg:inline">{user?.name}</span>
                 <FaUser className="text-gray-700 hover:text-slate-600" size={20} />
               </div>
             ) : (
@@ -113,18 +114,19 @@ const NavigationBar = () => {
 
             {/* Dropdown Menu */}
             {isOpen && user && (
-              <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 z-50">
+              <div className="absolute right-0 mt-2 w-60 bg-cyan-900 shadow-lg rounded-lg py-2 z-50">
                 {user?.role === "user" && (
                   <>
-                    <Link to="/user-dashboard" className="block px-4 py-2 hover:bg-gray-100">Orders</Link>
-                    <Link to="/wishlist" className="block px-4 py-2 hover:bg-gray-100">Wishlist</Link>
+                  <h1 className="pl-5 pt-5 pb-2 text-white">Hello! <span className="font-bold">{user?.name}</span></h1> <hr />
+                    <Link to="/user-dashboard" className="block px-4 py-2 hover:bg-cyan-700 cursor-pointer flex items-center gap-2 text-white"><BsFillBoxSeamFill />My Orders</Link>
+                    {/* <Link to="/wishlist" className="block px-4 py-2 hover:bg-gray-100">Wishlist</Link> */}
                   </>
                 )}
                 {user?.role === "admin" && (
-                  <Link to="/admin-dashboard" className="block px-4 py-2 hover:bg-gray-100">Admin Dashboard</Link>
+                  <Link to="/admin-dashboard" className="block px-4 py-2 hover:bg-cyan-700 text-white">Admin Dashboard</Link>
                 )}
-                <Link to="/edit-profile" className="block px-4 py-2 hover:bg-gray-100">Edit Profile</Link>
-                <span onClick={logout} className="block px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2">
+                {/* <Link to="/edit-profile" className="block px-4 py-2 hover:bg-gray-100">Edit Profile</Link> */}
+                <span onClick={logout} className="block px-4 py-2 hover:bg-cyan-700 cursor-pointer flex items-center gap-2 text-white">
                   <TbLogout2 /> Logout
                 </span>
               </div>

@@ -32,7 +32,7 @@ const UserDashboard = () => {
                     </div>
                     <h1 className="text-lg font-bold">Name: <span className="font-medium">{user?.name || "N/A"}</span></h1>
                     <h1 className="text-lg font-bold">Email: <span className="font-medium">{user?.email || "N/A"}</span></h1>
-                    <h1 className="text-lg font-bold">Role: <span className="font-medium">{user?.role || "N/A"}</span></h1>
+                    {/* <h1 className="text-lg font-bold">Role: <span className="font-medium">{user?.role || "N/A"}</span></h1> */}
                 </div>
 
                 {/* Order Details Section */}

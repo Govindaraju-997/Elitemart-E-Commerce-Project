@@ -107,8 +107,8 @@ const UserDetail = () => {
 
     return (
         <div>
-            <h1 className="text-xl text-blue-800 font-bold">All Users</h1>
-            <div className="w-full overflow-x-auto mb-7">
+            <h1 className="text-xl text-blue-800 font-bold mt-5 mb-5">All Users</h1>
+            <div className="w-full overflow-x-auto mb-10">
                 <table className="w-full text-left border border-collapse sm:border-separate border-slate-200 text-blue-800">
                     <thead>
                         <tr>

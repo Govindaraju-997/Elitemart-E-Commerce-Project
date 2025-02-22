@@ -5,6 +5,8 @@ import Loader from "../loader/Loader";
 import { deleteDoc, doc } from "firebase/firestore";
 import { fireDB } from "../../firebase/Firebase";
 import toast from "react-hot-toast";
+import { MdDelete } from "react-icons/md";
+import { TbEdit } from "react-icons/tb";
 
 const ProductDetail = () => {
     const context = useContext(myContext);
@@ -46,48 +48,48 @@ const ProductDetail = () => {
             {/* table  */}
             <div className="w-full overflow-x-auto mb-5">
 
-                <table className="w-full text-left border border-collapse sm:border-separate border-pink-100 text-pink-400" >
+                <table className="w-full text-left border border-collapse sm:border-separate border-slate-300" >
 
                     <tbody>
                         <tr>
-                            <th scope="col" className="h-12 px-6 text-md border-l first:border-l-0 border-pink-100 text-slate-700 bg-slate-100 font-bold fontPara">S.No.</th>
-                            <th scope="col" className="h-12 px-6 text-md border-l first:border-l-0 border-pink-100 text-slate-700 bg-slate-100 font-bold fontPara">Image</th>
-                            <th scope="col" className="h-12 px-6 text-md font-bold fontPara border-l first:border-l-0 border-pink-100 text-slate-700 bg-slate-100">Title</th>
-                            <th scope="col" className="h-12 px-6 text-md font-bold fontPara border-l first:border-l-0 border-pink-100 text-slate-700 bg-slate-100">Price</th>
-                            <th scope="col" className="h-12 px-6 text-md font-bold fontPara border-l first:border-l-0 border-pink-100 text-slate-700 bg-slate-100">Category</th>
-                            <th scope="col" className="h-12 px-6 text-md font-bold fontPara border-l first:border-l-0 border-pink-100 text-slate-700 bg-slate-100"> Date</th>
-                            <th scope="col" className="h-12 px-6 text-md font-bold fontPara border-l first:border-l-0 border-pink-100 text-slate-700 bg-slate-100">Action</th>
-                            <th scope="col" className="h-12 px-6 text-md font-bold fontPara border-l first:border-l-0 border-pink-100 text-slate-700 bg-slate-100">Action</th>
+                            <th scope="col" className="h-12 px-6 border-zinc-300 bg-slate-200 font-bold">S.No.</th>
+                            <th scope="col" className="h-12 px-6 border-zinc-300 bg-slate-200 font-bold">Image</th>
+                            <th scope="col" className="h-12 px-6 border-zinc-300 bg-slate-200 font-bold">Title</th>
+                            <th scope="col" className="h-12 px-6 border-zinc-300 bg-slate-200 font-bold">Price</th>
+                            <th scope="col" className="h-12 px-6 border-zinc-300 bg-slate-200 font-bold">Category</th>
+                            <th scope="col" className="h-12 px-6 border-zinc-300 bg-slate-200 font-bold"> Date</th>
+                            <th scope="col" className="h-12 px-6 border-zinc-300 bg-slate-200 font-bold">Action</th>
+                            <th scope="col"className="h-12 px-6 border-zinc-300 bg-slate-200 font-bold">Action</th>
                         </tr>
                         {getAllProduct.map((item, index) => {
                             const { id, title, price, category, date, productImageUrl } = item
                             return (
                                 <tr key={index} className="text-pink-300">
-                                    <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500 ">
+                                    <td className="h-12 px-6 text-md border-l first:border-l-0 border-pink-100 text-slate-700 bg-slate-100">
                                         {index + 1}.
                                     </td>
-                                    <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500 first-letter:uppercase ">
+                                    <td className="h-12 px-6 text-md border-l first:border-l-0 border-pink-100 text-slate-700 bg-slate-100">
                                         <div className="flex justify-center">
                                             <img className="w-20 " src={productImageUrl} alt="" />
                                         </div>
                                     </td>
-                                    <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500 first-letter:uppercase ">
+                                    <td className="h-12 px-6 text-md border-l first:border-l-0 border-pink-100 text-slate-700 bg-slate-100">
                                         {title}
                                     </td>
-                                    <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500 first-letter:uppercase ">
+                                    <td className="h-12 px-6 text-md border-l first:border-l-0 border-pink-100 text-slate-700 bg-slate-100">
                                         ₹{price}
                                     </td>
-                                    <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500 first-letter:uppercase ">
+                                    <td className="h-12 px-6 text-md border-l first:border-l-0 border-pink-100 text-slate-700 bg-slate-100">
                                         {category}
                                     </td>
-                                    <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500 first-letter:uppercase ">
+                                    <td className="h-12 px-6 text-md border-l first:border-l-0 border-pink-100 text-slate-700 bg-slate-100">
                                         {date}
                                     </td>
-                                    <td onClick={()=> navigate(`/updateproduct/${id}`)} className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-green-500 cursor-pointer ">
-                                        Edit
+                                    <td onClick={()=> navigate(`/updateproduct/${id}`)} className="h-12 px-6 text-md border-l first:border-l-0 border-pink-100 text-slate-700 bg-slate-100 cursor-pointer">
+                                    <TbEdit />
                                     </td>
-                                    <td onClick={()=> deleteProduct(id)} className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-red-500 cursor-pointer ">
-                                        Delete
+                                    <td onClick={()=> deleteProduct(id)} className="h-12 px-6 text-md border-l first:border-l-0 border-pink-100 text-slate-700 bg-slate-100 cursor-pointer">
+                                    <MdDelete />
                                     </td>
                                 </tr>
                             )
