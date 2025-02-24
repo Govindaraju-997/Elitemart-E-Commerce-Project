@@ -25,9 +25,6 @@ const CartPage = () => {
         dispatch(incrementQuantity(id));
     };
 
-    // const handleDecrement = (id) => {
-    //     dispatch(decrementQuantity(id));
-    // };
     const handleDecrement = (id) => {
         // Check if quantity is greater than 1 before decrementing
         const item = cartItems.find((item) => item.id === id);
