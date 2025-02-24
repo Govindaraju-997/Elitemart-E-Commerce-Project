@@ -13,8 +13,6 @@ import toast from "react-hot-toast";
 const ProductInfo = () => {
     const { loading, setLoading } = useContext(myContext);
     const [product, setProduct] = useState(null);
-    // const [selectedSize, setSelectedSize] = useState(null);
-    // const [selectedColor, setSelectedColor] = useState(null);
     const [quantity, setQuantity] = useState(1);
     const { id } = useParams();
     const cartItems = useSelector((state) => state.cart);
@@ -85,9 +83,6 @@ const ProductInfo = () => {
                                         <button onClick={addCart} className="px-6 py-3 bg-orange-400 text-white font-bold rounded-lg w-full">Add to Cart</button>
                                         <button className="px-6 py-3 bg-orange-600 text-white font-bold rounded-lg w-full">Buy Now</button>
                                     </div>
-
-                                    {/* Add to Wishlist */}
-                                    <button className="mt-4 text-orange-500 underline">Add to Wishlist</button>
 
                                     {/* Delivery & Return Info */}
                                     <div className="mt-6 border-t pt-4">

@@ -2,7 +2,7 @@ import { useNavigate } from "react-router";
 
 const category = [
     {
-        image: 'https://cdn-icons-png.flaticon.com/256/4359/4359963.png',
+        image: 'https://cdn-icons-png.freepik.com/256/7417/7417708.png?ga=GA1.1.458429582.1738823084&semt=ais_hybrid',
         name: 'Fashion'
     },
     {
@@ -43,7 +43,7 @@ const Category = () => {
                         {category.map((item, index) => {
                             return (
                                 <div key={index} className="px-3 lg:px-10">
-                                    <div onClick={() => navigate(`/category/${item.name}`)} className=" w-20 h-20 lg:w-25 lg:h-25 max-w-xs rounded-full  bg-slate-800 transition-all hover:bg-slate-600 cursor-pointer mb-1 "  >
+                                    <div onClick={() => navigate(`/category/${item.name}`)} className=" w-20 h-20 lg:w-25 lg:h-25 max-w-xs rounded-full  bg-slate-800 transition-all hover:bg-slate-950 cursor-pointer mb-1 "  >
                                         <div className="flex justify-center mb-12">
                                             <img src={item.image} alt="img" />
                                         </div>
