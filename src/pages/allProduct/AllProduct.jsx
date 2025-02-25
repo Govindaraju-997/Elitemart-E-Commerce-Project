@@ -50,6 +50,7 @@ const AllProduct = () => {
     Shoes: ["Men's Shoes", "Women's Shoes"],
     Appliances: ["Kitchen", "Laundry"],
     'Home & Furniture': ["Living Room", "Bedroom"],
+    Books:['Fiction', 'Non-fiction', 'Academic']
   };
 
   useEffect(() => {
