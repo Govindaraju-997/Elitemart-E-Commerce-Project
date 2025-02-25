@@ -104,7 +104,7 @@ const NavigationBar = () => {
             {user ? (
               <div className="flex items-center gap-2 cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
                 <span className="hidden lg:inline">{user?.name}</span>
-                <FaRegCircleUser className="text-gray-700 hover:text-slate-600" size={20} />
+                <FaRegCircleUser className="text-gray-700 hover:text-slate-600" size={21} />
               </div>
             ) : (
               <Link to="/login" className="px-4 py-2 bg-slate-600 text-white rounded-lg hover:bg-slate-800">
