@@ -47,7 +47,7 @@ const AllProduct = () => {
     Fashion: ["Men's Wear", "Women's Wear", "Kid's Wear"],
     Electronics: ["Laptops", "Cameras" , "Audio"],
     Mobiles: ["Smartphones", "Feature Phones"],
-    shoes: ["Men's Shoes", "Women's Shoes"],
+    Shoes: ["Men's Shoes", "Women's Shoes"],
     Appliances: ["Kitchen", "Laundry"],
     'Home & Furniture': ["Living Room", "Bedroom"],
   };
