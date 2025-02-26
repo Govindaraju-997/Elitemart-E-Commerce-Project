@@ -77,7 +77,7 @@ const CategoryPage = () => {
 
     return (
         <Layout>
-            <div className="mt-25 flex">
+            <div className="mt-35 flex min-h-140">
                 {/* Sidebar Filters */}
                 <aside className="w-1/4 p-4 border-r hidden lg:block">
                     <h2 className="text-xl font-semibold mb-4">Filters</h2>

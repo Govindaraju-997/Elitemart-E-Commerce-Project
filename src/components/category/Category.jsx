@@ -35,7 +35,7 @@ const Category = () => {
     const navigate = useNavigate();
     return (
         <div>
-            <div className="flex flex-col mt-25 mb-8">
+            <div className="flex flex-col mt-35 mb-8">
                 <div className="flex overflow-x-scroll lg:justify-center  hide-scroll-bar">
                     <div className="flex ">
                         {category.map((item, index) => {
