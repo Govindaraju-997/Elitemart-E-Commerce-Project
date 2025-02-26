@@ -9,7 +9,6 @@ const category = [
         image: 'https://cdn-icons-png.flaticon.com/256/12114/12114279.png',
         name: 'Appliances'
     },
-    
     {
         image: 'https://cdn-icons-png.flaticon.com/256/7648/7648246.png',
         name: 'Mobiles'
@@ -23,9 +22,8 @@ const category = [
         name: 'Shoes'
     },
     {
-        image:  "https://media-hosting.imagekit.io//ce6ad3dfd5d14f14/home-furniture.png?Expires=1833516975&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=eX0UazQJyGm~fobYnd0qMsKJCVKJNxCSY0QlSHxGi5YdQFToTUKpHurvEH7P7UbZGTR4oET6bSvZwxE741buaIrbp22let-d~-~6l5ecZhCPrwKq0xdgjP6ReBbjIFvJKWhC0ohgP--04rP1wAKAOpy3n6O5AvVlUcv-5FH5x7XGSeqXRYvFUH1R0umEqgzzLJNtlbUqosbksB4J2je1WEnLTVdh3YpGnkdggJ~yJq2tUWbwPIGE7zjcxMde15q~ZSKQ3aUCIZXI~fzYzyl-Ihks9ZsXZHuVdbrzpMwO48j-WwYhbUnA52M0HHY2Ek~ZoroqueBzcKDuyYGugK9URA__",
+        image: "https://media-hosting.imagekit.io//ce6ad3dfd5d14f14/home-furniture.png?Expires=1833516975&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=eX0UazQJyGm~fobYnd0qMsKJCVKJNxCSY0QlSHxGi5YdQFToTUKpHurvEH7P7UbZGTR4oET6bSvZwxE741buaIrbp22let-d~-~6l5ecZhCPrwKq0xdgjP6ReBbjIFvJKWhC0ohgP--04rP1wAKAOpy3n6O5AvVlUcv-5FH5x7XGSeqXRYvFUH1R0umEqgzzLJNtlbUqosbksB4J2je1WEnLTVdh3YpGnkdggJ~yJq2tUWbwPIGE7zjcxMde15q~ZSKQ3aUCIZXI~fzYzyl-Ihks9ZsXZHuVdbrzpMwO48j-WwYhbUnA52M0HHY2Ek~ZoroqueBzcKDuyYGugK9URA__",
         name: 'Home & Furniture'
-       
     },
     {
         image: 'https://cdn-icons-png.flaticon.com/256/11946/11946316.png',
@@ -43,7 +41,7 @@ const Category = () => {
                         {category.map((item, index) => {
                             return (
                                 <div key={index} className="px-3 lg:px-10">
-                                    <div onClick={() => navigate(`/category/${item.name}`)} className=" w-20 h-20 lg:w-25 lg:h-25 max-w-xs rounded-full  bg-slate-800 transition-all hover:bg-slate-950 cursor-pointer mb-1 "  >
+                                    <div onClick={() => navigate(`/category/${item.name}`)} className=" w-20 h-20 lg:w-25 lg:h-25 max-w-xs rounded-full  transition-all  cursor-pointer mb-1 "  >
                                         <div className="flex justify-center mb-12">
                                             <img src={item.image} alt="img" />
                                         </div>

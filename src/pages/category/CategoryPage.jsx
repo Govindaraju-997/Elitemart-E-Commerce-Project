@@ -17,7 +17,7 @@ const CategoryPage = () => {
     const dispatch = useDispatch();
 
     const [currentPage, setCurrentPage] = useState(0);
-    const productsPerPage = 8;
+    const productsPerPage = 16;
 
     const [priceSort, setPriceSort] = useState("");
     const [selectedSubCategory, setSelectedSubCategory] = useState("");

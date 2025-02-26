@@ -14,7 +14,7 @@ const BuyNowModal = ({ name, address, pincode, phoneNumber,email, setName, setAd
             <Button
                 type="button"
                 onClick={handleOpen}
-                className="w-full px-4 py-3 text-center text-white bg-green-900 hover:bg-green-700 rounded-xl"
+                className="w-full px-4 py-3 text-center text-white bg-orange-600 rounded-xl"
             >
                 Buy now
             </Button>
