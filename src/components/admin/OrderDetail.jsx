@@ -5,15 +5,15 @@ import Loader from "../loader/Loader";
 
 const OrderDetail = () => {
     const context = useContext(myContext);
-    const {loading, getAllOrder, deleteOrder } = context;
+    const { loading, getAllOrder, deleteOrder } = context;
 
     return (
         <div>
             <div className="py-5">
                 <h1 className="text-xl text-blue-800 font-bold">All Orders</h1>
             </div>
-             {/* Loading  */}
-             <div className="flex justify-center relative top-20">
+            {/* Loading  */}
+            <div className="flex justify-center relative top-20">
                 {loading && <Loader />}
             </div>
 
