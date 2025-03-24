@@ -22,7 +22,7 @@ const ContactUs = () => {
               <strong>Email:</strong> support@elitemart.com
             </p>
             <p className="text-blue-950 text-lg mt-2">
-              <strong>Phone:</strong> +91 79891 48955
+              <strong>Phone:</strong> +91 12345 67890
             </p>
             <p className="text-blue-950 text-lg mt-2">
               <strong>Address:</strong> 123 EliteMart St, Hyderabad City, 500083
